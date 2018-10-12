@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>this is my website</title>
+    <link rel="stylesheet" href="../static/css/semantic.css" />
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/semantic.js" ></script>
+</head>
+<body>
+    <div class="ui thin visible left sidebar inverted vertical menu">
+        <div class="header item"><img src="../static/images/logo2.png"></div>
+        <div class="item">Documents<i class="browser icon"></i> </div>
+        <div class="item">Charts<i class="bar chart icon"></i> </div>
+        <div class="item">Others<i class="idea icon"></i></div>
+    </div>
+    <div class="pusher">
+    <div class="ui menu">
+        <a class="header item" id="side_menu">Menu<i class="content icon"></i></a>
+        <a class="item">about us</a>
+        <a class="item">location</a>
+        <a class="item">others</a>
+    </div>
+    <div class="ui container">
+        <div class="ui divided items">
+            <div class="item">
+                <div class="ui tiny image">
+                    <img src="../static/images/0001.jpg" >
+                </div>
+                <div class="content">
+                    <div class="ui header">this is a header</div>
+                    <p>say something!</p>
+                    <div class="extra">
+                        <div class="ui label">tag1</div>
+                        <div class="ui label">tag2</div>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ui tiny image">
+                    <img src="../static/images/0002.jpg" >
+                </div>
+                <div class="content">
+                    <div class="ui header">this is a header</div>
+                    <p>say something!</p>
+                    <div class="extra">
+                        <div class="ui label">tag1</div>
+                        <div class="ui label">tag2</div>
+                </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="ui tiny image">
+                    <img src="../static/images/0003.jpg" >
+                </div>
+                <div class="content">
+                    <div class="ui header">this is a header</div>
+                    <p>say something!</p>
+                    <div class="extra">
+                        <div class="ui label">tag1</div>
+                        <div class="ui label">tag2</div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui pagination menu">
+        <a class="item" href="#"><</a>
+        <div class="item">page 1 of 10</div>
+        <a class="item" href="#">></a>
+    </div>
+    </div>
+    </div>
+    <script>
+        $('#side_menu').click(function() {
+            $('.ui.sidebar').sidebar('toggle');
+        });
+    </script>
+</body>
+</html>

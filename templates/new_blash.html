@@ -1,0 +1,50 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'new_blah2.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'images/blah.png' %}">
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Site</a></li>
+            <li><a href="#">Other</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h2>Article</h2>
+        <ul class="articles">
+            {% for item in pokemon %}
+            <li>
+                <img src="{% static 'images/0001.jpg' %}" width="100" height="91">
+                <div class="article-info">
+                    <h3><a href="www.sample.com">{{ item.name }}</a></h3>
+                    <p class="meta-info">
+                        {% for type in item.types %}
+                            <span class="meta-cate">{{ type }}</span>
+                        {% endfor %}
+                    </p>
+                    <p class="description">{{ item.desc }}</p>
+                </div>
+                <div class="rate">
+                    <span class="rate-score">{{ item.rate }}</span>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    <div class="main-content-pagitor">
+        {% if pokemon.has_previous %}
+            <a href="?page={{ pokemon.previous_page_number}}">pre</a>
+        {% endif %}
+        <span>{{ pokemon.number }} of {{ pokemon.paginator.num_pages }}</span>
+        {% if pokemon.has_next %}
+            <a href="?page={{ pokemon.next_page_number }}">next</a>
+        {% endif %}
+    </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Mugglecoding</p>
+    </div>
+</body>
+</html>
